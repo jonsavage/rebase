@@ -77,7 +77,7 @@ git fetch fork $HEAD_BRANCH
 
 # do the rebase
 git checkout -b $HEAD_BRANCH fork/$HEAD_BRANCH
-git rebase origin/$BASE_BRANCH
+git rebase origin/$BASE_BRANCH --autosquash
 
 # push back
 git push --force-with-lease fork $HEAD_BRANCH
